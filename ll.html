@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>\<head>
+<title>
+	
+
+</title>
+
+<script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+</head>
+<body>
+	
+	<h1 id="heading">Heading</h1>
+	<p> This is paragraph</p>
+	<p>This is parapragh 2</p>
+	<div>
+		<h2>This is h2</h2>
+
+	</div>
+
+	<ul id="ul">
+		<li id="l1">list 1</li>
+		<li id="l2">list 2</li>
+
+	</ul>
+	<button onclick="addItem()">Click</button>
+
+
+
+  <script type="text/javascript">
+
+   $('#heading').click(() => {
+         $(#heading).text("hello world");  }
+
+  setTimeout(() => {
+        $("#Heading").text("Heading");
+         $("#heading").css("borderStyle") , "dashed";
+
+  } , 4000);
+
+    $('#p1').click((e)=>{
+
+        $(e.currentTarget).html('<h2>foo bar</h2>')
+        .fadeOut(3000)
+        .fadeIN(3000);
+    })
+
+
+
+
+
+
+
+  //  $('#heading').click (function(){
+  //        $(#heading).text("hello world");
+
+  //  }
+
+  // setTimeout(function() {
+  //       $("#Heading").text("Heading");
+  //        $("#heading").css("borderStyle") , "dashed";
+
+  // } , 4000);
+
+  //   $('#p1').click(function(){
+
+  //       $(this).html('<h2>foo bar</h2>');
+  //       .fadeOut(3000)
+  //       .fadeIN(3000);
+  //   })
+
+
+
+
+
+
+
+
+
+  // <script type="text/javascript">
+
+  //  jQuery('#heading').click (function(){
+  //        jQuery(#heading).text("hello world");
+
+  //  }
+
+  // setTimeout(function() {
+  //       jQuery("#Heading").text("Heading");
+  //        jQuery("#heading").css("borderStyle") , "dashed";
+
+  // } , 4000);
+
+
+
+  // <script type="text/javascript">
+
+  //  let h1 = document.getElementById('heading');
+  //  h1.onclick = function(){
+  //           heading.innerHTML = "hello world"
+
+  //  }
+
+  // setTimeout(function() {
+  //        h1.innerHTML = "Heading";
+  //        h1.style.borderStyle = "dashed";
+
+  // } , 4000);
+
+
+
+
+
+
+  	var heading = document.getElementById('heading');
+  	console.log(heading);
+  	heading.setAttribute('align','center');
+  	console.log(heading.getAttribute('align'));
+
+  	var p = document.getElementsByTagName('p');
+  	for(i in p)
+  		console.log(p[i]);
+
+  	p[0].innerHTML = "parapragh 1";
+
+// var l1 = document.getElementById('l1');
+// var l2 = document.getElementById('l2');
+
+//    l1.innerHTML = "new list 1"
+//    l2.innerHTML = "new List 2"
+
+  var li = document.getElementsByTagName('li');
+  for(let i in li)
+  	li[i].innerHTML = "new list" + (Number(i)+1);
+
+  var ul = document.getElementById('ul');
+
+    addItem = () => {
+   	let newli = document.createElement('li');
+   	newli.innerHTML = "more"
+   	ul.appendChild(newli)
+
+   }
+     
+
+
+  </script>
+   
+
+</body>
